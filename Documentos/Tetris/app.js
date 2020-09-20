@@ -60,7 +60,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
   //tirar o tetromino
   function undraw() {
-    current.forEach(index =>) {
+    current.forEach(index => {
       squares[currentPosition + index].classlist.remove('tetramino')
-    }
+    })
 }
+
+//faça o Tetromino descer a cada segundo
+
+  timerId = setInterval(moveDown, 1000)
+
+  //função mover para baixo
+  function moveDown() {
+    undraw()
+    currentPosition += width
+    draw()
+    freezer()
+  }
+
+    //função de congelamento
+    function freezer() {
+      if(current.some(index => squares[currentPosition + index + width].classlist.contains('taken')))
+        current.forEach(index => squares[currentPosition + index].classlist.add('taken'))
+        //começar uma nova queda de tetronimo
+        random = Math.floor(Math.random() * theTetrominoes.length)
+        current = theTetrominoes[random][currentRotation]
+        currentPosition = 4
+        draw()
+      }
+    }

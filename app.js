@@ -69,6 +69,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
   timerId = setInterval(moveDown, 1000)
 
+  //atribuir funções aos códigos-chaves
+  function control(e) {
+    if(e.keyCode === 37) {
+      moveLeft()
+    } else if (e.keyCode === 38) {
+      //rotate()
+    } else if (e.keyCode === 39) {
+      moveRight()
+    } else if (e.keyCode === 40) {
+      moveDown()
+    }
+  }
+
+document.addEventListener ('keyup', control)
+
   //função mover para baixo
   function moveDown() {
     undraw()
@@ -77,14 +92,42 @@ document.addEventListener('DOMContentLoaded', () => {
     freezer()
   }
 
-    //função de congelamento
-    function freezer() {
-      if(current.some(index => squares[currentPosition + index + width].classlist.contains('taken')))
-        current.forEach(index => squares[currentPosition + index].classlist.add('taken'))
-        //começar uma nova queda de tetronimo
-        random = Math.floor(Math.random() * theTetrominoes.length)
-        current = theTetrominoes[random][currentRotation]
-        currentPosition = 4
-        draw()
-      }
+  //função de congelamento
+  function freezer() {
+    if(current.some(index => squares[currentPosition + index + width].classlist.contains('taken')))
+      current.forEach(index => squares[currentPosition + index].classlist.add('taken'))
+      //começar uma nova queda de tetromino
+      random = Math.floor(Math.random() * theTetrominoes.length)
+      current = theTetrominoes[random][currentRotation]
+      currentPosition = 4
+      draw()
     }
+  }
+
+  //mova o tetromino para a esquerda, a menos que esteja na borda ou haja um bloqueio
+  function moveLeft() {
+    undraw()
+    const isAtLeftEdge = current.some(index => (courrentPosition + index) % width === 0
+
+    if(!isAtLeftEdge) currentPosition -=1
+
+    if(current.some(index => squares[currentPosition + index].classList.contains('taken'))) {
+      currentPosition +=1
+    }
+
+    draw()
+  }
+
+  //mova o tetrominopara a direita, a menos que esteja na borda ou haja um bloqueio
+  function moveRight() {
+    undraw()
+    const isAtRightEdge = current.some(index => (currentPosition + index) % width === width -1)
+
+    if(!isAtRightEdge) currentPosition +=1
+
+    if(current.some(index => squares[currentPosition + index].classList.contains('taken'))) {
+      currentPosition -=1
+    }
+
+    draw()
+  }

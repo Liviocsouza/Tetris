@@ -38,6 +38,3 @@ Os alunos da disciplina (IF977) **Engenharia de Software** devem se organizar em
 ## Artefatos
 
 [Jogo](https://liviocsouza.github.io/Tetris/)
-[Hands on]
-
-

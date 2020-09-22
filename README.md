@@ -29,7 +29,7 @@ Copyright (c) 2020 Ania Kubow
 
 ## Contexto do desafio
 
-O desafio, batizado de Hackenge (Hackathon + Challenge = Método [de trabalho] cujo foco é criar um desafio prático para os participantes, consiste em tentar passar aos desafiados a experiência de uma programação em par através da implementação de um caso didático.
+O desafio, batizado de Hackenge (Hackathon + Challenge = Método [de trabalho] cujo foco é criar um desafio prático para os participantes) consiste em tentar passar aos desafiados a experiência de uma programação em par através da implementação de um caso didático.
 
 ## Descrição desafio
 

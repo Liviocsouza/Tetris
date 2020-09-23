@@ -23,7 +23,7 @@ Copyright (c) 2020 Ania Kubow
 
 ## Equipe
 
-- José
+- Josenildo lopes **(jls2)**
 - Livio Cavalcanti de souza **(lcs9)**
 - Yves Lawrrence Silva de Andrade Cavalcante **(ylsa)**
 

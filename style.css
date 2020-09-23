@@ -1,23 +1,45 @@
 .container{
 	display: flex;
-}
+	margin-top: 10px;
+	
+	
 
+}
+body{
+	background-color: black;
+	color: #F0FFFF
+}
+.head{
+	display: inline-flex;
+}
+p{
+	 padding-top: -10;
+}
 .grid {
+
   width: 200px;
   height: 400px;
   display: flex;
   flex-wrap: wrap;
-  background-color: yellow;
+  background-color: #DCDCDC;
+   ;
+  
+  
 }
 
 .grid div {
+ 
   height: 20px;
   width: 20px;
+
 
 }
 
 .tetromino {
   background-color: blue;
+ 
+  
+  
 }
 
 .mini-grid{
@@ -26,7 +48,7 @@
 	height: 80px;
 	display: flex;
 	flex-wrap: wrap;
-	background-color: yellow;
+	background-color: #DCDCDC;
 
 }
 .mini-grid div{

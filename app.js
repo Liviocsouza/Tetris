@@ -177,9 +177,10 @@ console.log("helo")
   startbtn.addEventListener('click', () => {
     if (timerId) {
       clearInterval(timerId)
+      timerId = null
     }else{
       draw()
-      timerId = setInterval(moveDown, 1000)
+      timerId = setInterval(moveDown, 200)
       nexRandom = Math.floor(Math.random()*theTetrominoes.length)
       displayShape()
     }
@@ -206,8 +207,10 @@ console.log("helo")
 
   function gameOver(){
     if (current.some(index => squares[currentPosition + index].classList.contains('taken'))) {
-      scoreDisplay.innerHTML = 'end'
+      scoreDisplay.innerHTML = 'FIM'
       clearInterval(timerId)
+      alert("Você perdeu, sua pontuação foi:"+score)
+
     }
   }
 

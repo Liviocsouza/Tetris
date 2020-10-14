@@ -35,6 +35,17 @@ O desafio, batizado de Hackenge (Hackathon + Challenge = Método [de trabalho] c
 
 Os alunos da disciplina (IF977) **Engenharia de Software** devem se organizar em equipe para este desafio e tentar vivenciar as experiências de uma programação em par. Aprender um pouco de JavaScript criando seu próprio jogo Tetris jogável. Escrever um post no Medium ou LinkedIn com o "hands on" da implementação desse caso didático.
 
+##Testes
+Foi proposto realizar testes fim-a-fim no jogo Tetris e o framework escolhido foi o cypress pela simplicidade de realizar os testes fim-a-fim e pela forma de debug
+Testes realizados:
+  - Inicar jogo
+    - Verificar se o site está funcionando
+    - Verificar se ao clicar no botão start está funcionando
+  - Mudar posição
+    - Verificar se o site está funcionando
+    - Verificar se ao clicar no botão start está funcionando
+    - Pressionar a seta para cima e mudar a posição
+
 ## Artefatos
 
 - [Link para o jogo](https://liviocsouza.github.io/Tetris/)
